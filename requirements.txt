@@ -3,5 +3,4 @@ South
 django-debug-toolbar
 coverage
 django-coverage
-psycopg2==2.4.5
 wsgiref
