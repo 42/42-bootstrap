@@ -1,0 +1,12 @@
+PROJECT_NAME={{ project_name }}
+
+PYTHONPATH=$(CURDIR):$(CURDIR)/$(PROJECT_NAME)
+
+MANAGE= PYTHONPATH=$(PYTHONPATH) python manage.py
+
+.PHONY: buildbot_test
+
+test: buildbot_test
+
+buildbot_test:
+	cp {{ project_name }}/settings/local.py.buildbot {{ project_name }}/settings/local.py

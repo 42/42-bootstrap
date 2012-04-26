@@ -1,0 +1,19 @@
+#
+# Excluded objects
+#
+
+.*
+*~
+*.py[co]
+*.ipr
+*.iml
+*.iws
+Vagrantfile
+tests/coverage/modules/*
+Makefile.def
+{{ project_name }}/settings/local.py
+
+#
+# Included objects
+#
+!.gitignore
