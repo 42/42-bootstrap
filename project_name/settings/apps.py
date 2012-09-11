@@ -13,6 +13,7 @@ INSTALLED_APPS += [
     ]
 
 INSTALLED_APPS += [
+    'helpers42cc',
     'debug_toolbar',
     'south',
     'django_coverage',
