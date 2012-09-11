@@ -9,7 +9,7 @@ Batteries included
 * Makefile that makes running management commands a little easier: make run, make test, make migrate.
 * requirements.txt with everything needed (pip-compatible).
 * base.html with blocks we use (block content, block header_content, block extra_style, etc.). `More on templates`_.
-* Twitter bootstrap (less version).
+* Twitter bootstrap (less version). base.html uses one collumn fluid layout
 * jquery 1.7.2  # TODO: update.
 * django-debug-toolbar.
 * sqlite3 as default DB.
@@ -32,7 +32,7 @@ To use this template use next commands::
 
 More on templates
 -----------------
-Base template skeleton includes many blocks that often should be filled with custom content. Chances that you'll need to modify base.html are low. New templates should look like this::
+Base template skeleton includes many blocks that often should be filled with custom content. It already uses bootstrap's one collumn fluid layout. New templates may look like this::
   
   {% extends 'base.html' %}  
 
