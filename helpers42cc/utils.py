@@ -1,19 +1,16 @@
 # -*- coding: utf-8 -*-
 import logging
-import os
 
 from PIL import Image
 
 
 def need_resize(image, size):
-    if image.width < size[0] and image.height < size[1]:
-        return False
-    return True
+    return image.width < size[0] and image.height < size[1]
 
 
 def resize_image(image, size=(1920, 1200)):
-    """
-    Resize images to size if it bigger than size
+    """Resize images to size if it bigger than size
+
     """
     image_need_resize = need_resize(image, size)
     try:

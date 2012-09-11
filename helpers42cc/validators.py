@@ -13,13 +13,15 @@ if settings.DEBUG:
 
 
 def validate_resizable(image):
-    """Check if image can't be resized with solr-thumbnail
+    """Check if image can't be resized with solr-thumbnail.
+    Some resizing backend fail to resize specific images so check is needed
 
     """
     try:
         # if file is just uploaded then it's not saved. Save it to temp location
         data = image.file
-        path = default_storage.save('tmp/' + uuid1().hex, ContentFile(data.read()))
+        path = default_storage.save(
+            'tmp/' + uuid1().hex, ContentFile(data.read()))
         temp_file = default_storage.open(path)
         get_thumbnail(temp_file, "100x100")
         temp_file.close()
@@ -29,4 +31,5 @@ def validate_resizable(image):
             traceback.print_exc()
             raise ValidationError(u"Image is corrupted: %s" % msg)
         else:
-            raise ValidationError(u"Image is corrupted and can't be resized by server.")
+            raise ValidationError(
+                u"Image is corrupted and can't be resized by server.")
