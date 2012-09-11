@@ -1,5 +1,8 @@
+42coffeecups.com team's django project template
+===============================================
+
 Batteries included
-==================
+------------------
 
 * Makefile and makefile.dev for our buildbot
 * django-debug-toolbar
