@@ -31,6 +31,7 @@ To use this template use next commands::
 More on templates
 -----------------
 Base template skeleton includes many blocks that often should be filled with custom content. Chances that you'll need to modify base.html are low.  New templates should look like this::
+
   {% extends 'base.html' %}  
 
   {% block extra_style %}
