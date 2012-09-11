@@ -4,16 +4,17 @@
 Batteries included
 ------------------
 
-* HTML5 ready: <header>, <article>, <footer>
-* CDN ready: custom storages can be easyly used because {% static path %} is used instead of {{STATIC_URL}}
-* Makefile that makes running management commands a little easier: make run, make test, make migrate
-* requirements.txt with everything needed (pip-coompatible)
-* base.html with blocks we use (block content, block header_content, block footer_content, block extra_style, block extra_head_js). `More on templates`_
-* Twitter bootstrap (less version)
-* jquery 1.7.2 # TODO: update
-* django-debug-toolbar
-* sqlite3 as default DB
-* fixture with user admin, password admin
+* HTML5 ready: <header>, <article>, <footer>.
+* CDN ready: custom storages can be easyly used because {% static path %} is used instead of {{STATIC_URL}}.
+* Makefile that makes running management commands a little easier: make run, make test, make migrate.
+* requirements.txt with everything needed (pip-coompatible).
+* base.html with blocks we use (block content, block header_content, block footer_content, block extra_style, block extra_head_js). `More on templates`_.
+* Twitter bootstrap (less version).
+* jquery 1.7.2  # TODO: update.
+* django-debug-toolbar.
+* sqlite3 as default DB.
+* fixture with user admin, password admin.
+
 
 Usage
 -----
@@ -28,10 +29,11 @@ To use this template use next commands::
   make syncdb
   make run
 
+
 More on templates
 -----------------
-Base template skeleton includes many blocks that often should be filled with custom content. Chances that you'll need to modify base.html are low.  New templates should look like this::
-
+Base template skeleton includes many blocks that often should be filled with custom content. Chances that you'll need to modify base.html are low. New templates should look like this::
+  
   {% extends 'base.html' %}  
 
   {% block extra_style %}
