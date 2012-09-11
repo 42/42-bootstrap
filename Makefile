@@ -57,6 +57,7 @@ endif
 
 migrate:
 ifndef APP_NAME
+	@echo "You can also specify -e APP_NAME='app' to check if new migrations needed for some app"
 	$(MANAGE) migrate
 else
 	@echo Starting of migration of $(APP_NAME)
