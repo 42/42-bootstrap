@@ -5,7 +5,9 @@ from django.conf import settings
 INVALID_IMAGE_MESSAGE = (
     u'Image must be .jpg .png .tiff or .gif and less than 10 Mb. Try again.')
 
-if settings.IS_TESTING:
+is_demo = getattr(settings, 'HELP42CC_IS_DEMO', False)
+
+if settings.IS_TESTING or is_demo:
     import urllib2
     import os
 
