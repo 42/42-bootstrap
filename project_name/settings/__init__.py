@@ -20,5 +20,4 @@ try:
 except:
     print '***{{ project_name }}/settins/local.py not found***'
 
-
 IS_TESTING = strtobool(os.environ.get("TESTING", "no"))

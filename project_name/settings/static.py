@@ -1,9 +1,7 @@
-from utils import root
+from .utils import root
 
-
-STATIC_ROOT = ''
-
-STATIC_URL = '/static/'
+STATIC_ROOT = root('static_media', 'static_root')
+STATIC_URL = '/media/static/'
 
 STATICFILES_DIRS = (
     root('static'),

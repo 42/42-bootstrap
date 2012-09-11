@@ -18,8 +18,8 @@ def userpic_for(user, geometry=None):
             getattr(user.profile, userpic_field)
         )
         if havepic:
-            url = user.profile.userpic.url
-            image = user.profile.userpic
+            url = havepic.url
+            image = havepic
         elif not hasattr(user.profile, userpic_field):
             raise AttributeError('User profile have no userpic field!')
     else:

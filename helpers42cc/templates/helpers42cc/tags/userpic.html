@@ -1,10 +1,9 @@
 {% spaceless %}
 {% load thumbnail %}
 {% load static from staticfiles %}
-
-{% if user_obj.userpic %}
+{% if image %}
     {% if geometry %}
-        {% thumbnail user.userpic geometry as im %}
+        {% thumbnail image geometry as im %}
             <img src="{{im.url}}" width="{{ im.width }}" height="{{ im.height }}"/>
         {% endthumbnail %}
     {% else %}
