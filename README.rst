@@ -79,6 +79,7 @@ When `django profiles`_ are used and they have image field for userpic this tag 
 
 
 In settings you can configure image field name and path to noavatar image::
+  
   HELP42CC_USERPIC_FIELD = 'userpic'
   HELP42CC_NOPIC_PATH = 'img/noavatar.png'
 
