@@ -5,9 +5,9 @@ Batteries included
 ------------------
 
 * HTML5 ready: <header>, <article>, <footer>.
-* CDN ready: custom storages can be easyly used because {% static path %} is used instead of {{STATIC_URL}}.
+* CDN ready: custom storages can be easily used because {% static path %} is used instead of {{STATIC_URL}}.
 * Makefile that makes running management commands a little easier: make run, make test, make migrate.
-* requirements.txt with everything needed (pip-coompatible).
+* requirements.txt with everything needed (pip-compatible).
 * base.html with blocks we use (block content, block header_content, block extra_style, etc.). `More on templates`_.
 * Twitter bootstrap (less version).
 * jquery 1.7.2  # TODO: update.
