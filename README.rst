@@ -10,7 +10,7 @@ Batteries included
 * Makefile that makes running management commands a little easier: make run, make test, make migrate.
 * requirements.txt with everything needed (pip-compatible).
 * base.html with blocks we use (block content, block header_content, block extra_style, etc.). `More on templates`_.
-* `Useful template tags`_
+* `Useful helpers`_
 * Twitter bootstrap (less version). base.html uses one collumn fluid layout
 * jquery 1.7.2  # TODO: update.
 * django-debug-toolbar.
@@ -63,12 +63,17 @@ Base template skeleton includes many blocks that often should be filled with cus
   {% endblock footer %}
 
 
-Useful template tags
+Useful helpers
 ====================
-Right now there is only one untested (but successfully used in our other projects) template tag: userpic_for
+Project includes reusable app helpers42cc. Include it in INSTALLED_APPS and use.
+
+
+Template Tags
+-------------
+Right now there is only one template tag: userpic_for
 
 userpic_for
------------
+~~~~~~~~~~~
 
 When `django profiles`_ are used and they have image field for userpic this tag becomes handy::
   
@@ -83,3 +88,12 @@ In settings you can configure image field name and path to noavatar image::
   HELP42CC_USERPIC_FIELD = 'userpic'
   HELP42CC_NOPIC_PATH = 'img/noavatar.png'
 
+
+Validators
+----------
+
+validate_resizable(image) — checks that image can be resized with solr.thumbnail
+
+Utils
+-----
+resize_image(image, size=(1920, 1200)) — resizes image to specific size
