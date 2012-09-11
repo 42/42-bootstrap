@@ -17,7 +17,8 @@ Batteries included
 
 Usage
 -----
-::
+To use this template use next commands::
+  
   git clone git@github.com:42/42-bootstrap.git
   PROJ_NAME=<newproject_name>
   django-admin.py startproject $PROJ_NAME --template=42-bootstrap --name='.gitignore,Makefile.def.buildbot,Makefile.def.default' --extension='json'
