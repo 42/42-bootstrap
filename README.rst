@@ -9,7 +9,7 @@ Batteries included
 * sqlite3 as default DB
 * requirements.txt compatible with pip.  with everything needed
 * base.html with blocks we use
-* less version if twitter bootstrap
+* Twitter bootstrap (less version)
 * jquery 1.7.2 # TODO: update
 * fixture with user admin, password admin
 
