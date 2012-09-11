@@ -1,4 +1,6 @@
 import logging
+import os
+from distutils.util import strtobool
 
 from default import *
 from admins import *
@@ -17,3 +19,6 @@ try:
     from local import *
 except:
     print '***{{ project_name }}/settins/local.py not found***'
+
+
+IS_TESTING = strtobool(os.environ.get("TESTING", "no"))
