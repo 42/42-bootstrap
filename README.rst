@@ -17,12 +17,13 @@ Batteries included
 
 Usage
 -----
-git clone git@github.com:42/42-bootstrap.git
-PROJ_NAME=<newproject_name>
-django-admin.py startproject $PROJ_NAME --template=42-bootstrap --name='.gitignore,Makefile.def.buildbot,Makefile.def.default' --extension='json'
-cp Makefile.def.default Makefile.def
-cp $PROJ_NAME/settings/local.py.default $PROJ_NAME/settings/local.py
-pip install -r requirements.txt
-make syncdb
-make run
+::
+  git clone git@github.com:42/42-bootstrap.git
+  PROJ_NAME=<newproject_name>
+  django-admin.py startproject $PROJ_NAME --template=42-bootstrap --name='.gitignore,Makefile.def.buildbot,Makefile.def.default' --extension='json'
+  cp Makefile.def.default Makefile.def
+  cp $PROJ_NAME/settings/local.py.default $PROJ_NAME/settings/local.py
+  pip install -r requirements.txt
+  make syncdb
+  make run
 
