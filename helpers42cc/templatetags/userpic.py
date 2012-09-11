@@ -9,6 +9,7 @@ userpic_field = getattr(settings, 'HELP42CC_USERPIC_FIELD', 'userpic')
 nopic_path = getattr(settings, 'HELP42CC_NOPIC_PATH', 'img/noavatar.png')
 
 
+# TODO: create tests for this
 @register.inclusion_tag('helpers42cc/tags/userpic.html')
 def userpic_for(user, geometry=None):
     if hasattr(user, 'profile'):
