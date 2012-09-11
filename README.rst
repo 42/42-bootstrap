@@ -1,14 +1,16 @@
+===============================================
 42coffeecups.com team's django project template
 ===============================================
 
 Batteries included
-------------------
+==================
 
 * HTML5 ready: <header>, <article>, <footer>.
 * CDN ready: custom storages can be easily used because {% static path %} is used instead of {{STATIC_URL}}.
 * Makefile that makes running management commands a little easier: make run, make test, make migrate.
 * requirements.txt with everything needed (pip-compatible).
 * base.html with blocks we use (block content, block header_content, block extra_style, etc.). `More on templates`_.
+* `Useful template tags`_
 * Twitter bootstrap (less version). base.html uses one collumn fluid layout
 * jquery 1.7.2  # TODO: update.
 * django-debug-toolbar.
@@ -17,7 +19,7 @@ Batteries included
 
 
 Usage
------
+=====
 To use this template use next commands::
   
   git clone git@github.com:42/42-bootstrap.git
@@ -31,7 +33,7 @@ To use this template use next commands::
 
 
 More on templates
------------------
+=================
 Base template skeleton includes many blocks that often should be filled with custom content. It already uses bootstrap's one collumn fluid layout. New templates may look like this::
   
   {% extends 'base.html' %}  
@@ -59,3 +61,24 @@ Base template skeleton includes many blocks that often should be filled with cus
   {% block footer %}
     Custom footer
   {% endblock footer %}
+
+
+Useful template tags
+====================
+Right now there is only one untested (but successfully used in our other projects) template tag: userpic_for
+
+userpic_for
+-----------
+
+When `django profiles`_ are used and they have image field for userpic this tag becomes handy::
+  
+  {% userpic for request.user %} {# will output <img> for full sized userpic#}
+  {% userpic for request.user "40x40" %} {# will output <img> for userpic resized to 40x40#}
+
+.. _django profiles: https://docs.djangoproject.com/en/1.4/topics/auth/#storing-additional-information-about-users
+
+
+In settings you can configure image field name and path to noavatar image::
+  HELP42CC_USERPIC_FIELD = 'userpic'
+  HELP42CC_NOPIC_PATH = 'img/noavatar.png'
+
