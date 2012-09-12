@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.conf import settings
+from .conf import settings
 
 INVALID_IMAGE_MESSAGE = (
     u'Image must be .jpg .png .tiff or .gif and less than 10 Mb. Try again.')
 
-is_demo = getattr(settings, 'HELP42CC_IS_DEMO', False)
-
-if settings.IS_TESTING or is_demo:
+if settings.IS_TESTING or settings.HELP42CC_IS_DEMO:
     import urllib2
     import os
 
