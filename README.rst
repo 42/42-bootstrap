@@ -4,7 +4,7 @@
 
 What and Why
 ============
-This is django template for startproject management command. It solves such tasks:
+This is django template for startproject management command. It solves next tasks:
 
 * "make run", "make test", "make migrate" and other short usefull commands defined in Makefile.
 * Standartized project and application structure. This is critical if there are many developers working on project
