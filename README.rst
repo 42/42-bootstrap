@@ -4,6 +4,12 @@
 
 What and Why
 ============
+This is django template for startproject management command. It solves such tasks:
+
+* "make run", "make test", "make migrate" and other short usefull commands defined in Makefile.
+* Standartized project and application structure. This is critical if there are many developers working on project
+* Extensible base.html template with many ready blocks. And it uses bootstrap flexible layout. Every project will have similar templates
+* helpers42cc reusable django application that will be filled with commonly used solutions. Right now it's userpic templatetag, resize_image helper and validate_resizable validator
 
 
 Batteries included
@@ -35,6 +41,12 @@ To use this template use next commands::
   pip install -r requirements.txt
   make syncdb
   make run
+
+
+To use app template::
+
+  git clone git@github.com:42/42-bootstrap.git
+  django-admin.py startapp APP_NAME --template 42-bootstrap/app_template/ 
 
 
 More on templates
