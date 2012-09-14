@@ -9,7 +9,7 @@ This is django template for startproject management command. It solves next task
 * "make run", "make test", "make migrate" and other short usefull commands defined in Makefile.
 * Standartized project and application structure. This is critical if there are many developers working on project.
 * Extensible base.html that is flexible enough for almost all our projects. And it uses bootstrap flexible layout.
-* helpers42cc reusable django application that will be filled with commonly used solutions. Right now it's userpic templatetag, resize_image helper and validate_resizable validator.
+* helpers42cc reusable django application that will be filled with commonly used solutions. Right now it includes: userpic templatetag, resize_image helper and validate_resizable validator.
 * Coming soon: Some commonly used solutions that depend on actual models will be placed in "demo" django application. These includes: haystack-solr searching, social auth, etc.
 
 
