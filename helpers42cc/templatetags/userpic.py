@@ -22,6 +22,9 @@ def userpic_for(user, geometry=None):
             image = havepic
         elif not hasattr(user.profile, userpic_field):
             raise AttributeError('User profile have no userpic field!')
+        else:
+            url = None
+            image = None
     else:
         url = staticfiles_storage.url(nopic_path)
         image = None

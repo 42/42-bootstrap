@@ -2,6 +2,10 @@
 42coffeecups.com team's django project template
 ===============================================
 
+What and Why
+============
+
+
 Batteries included
 ==================
 

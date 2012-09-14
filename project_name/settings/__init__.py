@@ -15,9 +15,10 @@ from debug_toolbar_settings import *
 from logging import *
 from tests import *
 
+IS_TESTING = strtobool(os.environ.get("TESTING", "no"))
+
 try:
     from local import *
 except:
     print '***{{ project_name }}/settins/local.py not found***'
 
-IS_TESTING = strtobool(os.environ.get("TESTING", "no"))
