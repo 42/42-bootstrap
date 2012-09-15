@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from .conf import settings
+from .conf import *
 
 INVALID_IMAGE_MESSAGE = (
     u'Image must be .jpg .png .tiff or .gif and less than 10 Mb. Try again.')
 
-if settings.IS_TESTING or settings.HELP42CC_IS_DEMO:
+if IS_TESTING or HELP42CC_IS_DEMO:
     import urllib2
     import os
 
