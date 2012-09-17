@@ -6,21 +6,23 @@ from django.template import Library
 register = Library()
 
 userpic_field = getattr(settings, 'HELP42CC_USERPIC_FIELD', 'userpic')
+profile_field = getattr(settings, 'HELP42CC_PROFILE_FIELD', 'profile')
 nopic_path = getattr(settings, 'HELP42CC_NOPIC_PATH', 'img/noavatar.png')
 
 
 # TODO: create tests for this
 @register.inclusion_tag('helpers42cc/tags/userpic.html')
 def userpic_for(user, geometry=None):
+    profile = getattr(user, profile_field)
     if hasattr(user, 'profile'):
         havepic = (
-            hasattr(user.profile, userpic_field) and
-            getattr(user.profile, userpic_field)
+            hasattr(profile, userpic_field) and
+            getattr(profile, userpic_field)
         )
         if havepic:
             url = havepic.url
             image = havepic
-        elif not hasattr(user.profile, userpic_field):
+        elif not hasattr(profile, userpic_field):
             raise AttributeError('User profile have no userpic field!')
         else:
             url = None
