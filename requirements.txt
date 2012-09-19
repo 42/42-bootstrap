@@ -7,4 +7,3 @@ wsgiref
 sorl-thumbnail
 PIL
 django-annoying
-django-coverage
