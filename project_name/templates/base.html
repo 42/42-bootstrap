@@ -45,7 +45,7 @@
     {% block header_content %}
     <nav>
           <ul class="nav nav-pills">
-            <li class="{% block home_active %}{% endblock %}"><a href="{% url home_page %}">{% trans "Home" %}</a></li>
+            <li class="{% block home_active %}{% endblock %}"><a href="{% url "home_page" %}">{% trans "Home" %}</a></li>
             <li class="{% block stub_active %}{% endblock %}"><a href="#">{% trans "Stub" %}</a></li>
           </ul>
     </nav>
